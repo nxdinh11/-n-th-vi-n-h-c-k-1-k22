@@ -1,0 +1,43 @@
+
+/**
+databaseName: libraries includes 5 table
+    
+    * ACCOUNT_ADMIN
+      -- USERNAME [PK, NVARCHAR(100) NOT NULL ]
+      -- PASSWORD [NVARCHAR(100) NOT NULL ] 
+      
+    * ACCOUNT_USER
+    --  USERNAME [PK, NVARCHAR(100) NOT NULL ]
+    --  PASSWORD [NVARCHAR(100) NOT NULL ] 
+     
+    * IN4BOOK
+    -- ID_BOOK [PK, NVARCHAR(20), NOT NULL]
+    -- TENSACH [NVARCHAR(50), NOT NULL]
+    -- TACGIA [NVARCHAR(50), NOT NULL]
+    -- THELOAI [NVARCHAR(50), NOT NULL]
+    -- GIATIEN [FLOAT, NOT NULL]
+    -- SOLUONG [NUMERIC(18, 0), NOT NULL]
+    
+    * STUDENT 
+     -- ID_STUDENT (PK, NVARCHAR(20), NOT NULL)
+     -- FULLNAME (NVARCHAR(20), NOT NULL)
+     -- CLASS (NVARCHAR(10), NOT NULL)
+      -- HOMETOWN (NVARCHAR(255), NOT NULL) 
+     -- YOB (NVARCHAR(10), NOT NULL)
+     -- QUANTITY(INT, NULL)
+     -- USERNAME (FK, NVARCHAR(100), NULL)
+            *USERNAME LÀ KHÓA NGOẠI THAM CHIẾU ĐẾN KHÓA CHÍNH CỦA BẢNG ACCOUNT_USER
+    
+    * MUONSACH
+     -- ID_BOOK [PK, FK, NVARCHAR(20), NOT NULL]
+     -- ID_STUDENT [PK, FK, NVARCHAR(20), NOT NULL]
+     -- BORROWED_DATE [DATE, NOT NULL]
+     -- RETURN_DATE [DATE,  NOT NULL]
+     -- DATRA [BIT, NULL]
+            ID_BOOK LÀ KHÓA NGOẠI THAM CHIẾU ĐẾN KHÓA CHÍNH CỦA BẢNG IN4BOOK
+            ID_STUDENT LÀ KHÓA NGOẠI THAM CHIẾU ĐẾN KHÓA CHÍNH CỦA BẢNG STUDENT 
+*/
+
+package StudentCard;
+public class database_summary {
+}
